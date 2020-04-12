@@ -1,12 +1,12 @@
 {
   "name": "crud-notes",
   "version": "1.0.0",
-  "description": "crud app for step-prjct",
+  "description": "crud app",
   "main": "app.js",
   "scripts": {
     "start": ""
   },
-  "author": "Bash-Ped-Mel",
+  "author": "Melnick",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.2",
