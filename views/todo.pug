@@ -1,0 +1,23 @@
+extends layout
+
+block contentTodos
+  include modal
+  #myDIV.header-todos
+    .form-row
+      .col.d-flex.justify-content-center
+        input(type ="text" value = title readonly class = "todo-title h1",id="todoTitle")
+    br
+    .form-row
+      .col-9
+        input#myInput.form-control(type='text', placeholder='Add list item here...')
+        input#inputId(type='hidden', value=todo_id)   
+      .col
+        span.addBtn.btn.btn-secondary.form-control Add    
+  ul#myUL
+    each todo in todos
+     li(class=`${todo.checked ? "checked listItem" :"listItem"}` )= todo.text
+  hr
+  .mb-5
+    input.btn.btn-primary.d-none(type='button', value='Exit' id="exitAndUpdateTodo")
+    div.btn.btn-primary(id="submit") Submit
+    a.btn.btn-danger.delete-todo.ml-3(href='#', data-id=todo_id) Delete

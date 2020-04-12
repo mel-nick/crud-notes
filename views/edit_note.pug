@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 #{title}
+  include modal
+  form(method='POST', action='/notes/edit/'+note._id)
+    .form-group
+      label Title:
+      input.form-control(name='title', type='text', value=note.title)
+    .form-group
+      label Body:
+      textarea.form-control(name='body')= note.body
+    br
+    input.btn.btn-primary.d-none(type='submit', value='Submit')
+    div.btn.btn-primary(id="submit") Submit

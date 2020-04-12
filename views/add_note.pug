@@ -1,0 +1,16 @@
+extends layout 
+
+block content
+  h1 #{title}
+  include modal
+  form(method='POST', action='/notes/add')
+    .form-group
+      label Title:
+      input.form-control(name='title', type='text')
+    .form-group
+      label Body:
+      textarea.form-control(name='body')
+    br
+    input.btn.btn-primary.d-none(type='submit', value='Submit')
+    div.btn.btn-primary(id="submit") Submit
+  
