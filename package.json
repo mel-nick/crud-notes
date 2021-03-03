@@ -17,6 +17,6 @@
     "express-session": "^1.15.3",
     "express-validator": "^3.2.1",
     "mongoose": "^5.4.20",
-    "pug": "^2.0.0-rc.2"
+    "pug": "^3.0.1"
   }
 }
